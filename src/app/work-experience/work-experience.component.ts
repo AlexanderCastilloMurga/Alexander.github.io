@@ -9,19 +9,31 @@ import { CommonModule } from '@angular/common';
   styleUrl: './work-experience.component.css'
 })
 export class WorkExperienceComponent {
-
-    workExperience : Array<any> = [];
-    ngOnInit(): void {
+  workExperience: Array<any> = [];
+  ngOnInit(): void {
     let work1 = {
-    fecha: "2018-2022",
-    ubicacion: "Ixtac Ver.",
-    puesto: "CEO",
-    empresa: "Waves Lab",
-    logros : [
-    { descripcion : "Construccion de un ERP en la nube de google" },
-    { descripcion : "Creacion de un cluster en hadoop y spark" }
-
-]
+      fecha: '2018-2022',
+      ubicacion: 'Ixtac Ver.',
+      puesto: 'CEO',
+      empresa: 'Waves Lab',
+      logros: [
+        { descripcion: 'Construccion de un ERP en la nube de Google' },
+        { descripcion: 'Creacion de un cluster en Hadoop y Spark' },
+      ],
     };
-}
+    let work2 = {
+      fecha: '2014-2018',
+      ubicacion: 'Orizaba, Ver.',
+      puesto: 'CEO',
+      empresa: 'Kubeet',
+      logros: [
+        { descripcion: 'Construccion de un invernadero hidroponico' },
+        { descripcion: 'Creacion de un dron autonomo' },
+      ],
+    };
+
+    this.workExperience.push(work1);
+    this.workExperience.push(work2);
+    console.log(this.workExperience);
+  }
 }
